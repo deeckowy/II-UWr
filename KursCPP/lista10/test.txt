@@ -1,0 +1,6 @@
+print 3 2 + |
+assign 3232 00 + | to p
+print p 3 mod |
+assign 321 321 + | to l
+print l | 
+exit
