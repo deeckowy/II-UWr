@@ -1,0 +1,9 @@
+#!/bin/bash
+
+make
+
+./transpose -n 1024 -v 1 >>test.txt
+./transpose -n 2048 -v 1 >>test.txt
+./transpose -n 4096 -v 1 >>test.txt
+./transpose -n 8192 -v 1 >>test.txt
+

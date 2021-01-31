@@ -1,0 +1,13 @@
+#!/bin/bash
+
+X=5
+
+for X in {5..10} 
+do
+	K=1
+	for K in {1..10}
+	do 
+		./randwalk -p ipc -S 0xea3495cc76b34acc -n $X -s $X+1 -t $X+2 -v 0 >>teout.txt
+ 		./randwalk -p ipc -S 0xea3495cc76b34acc -n $X -s $X+1 -t $X+2 -v 1 >>teout.txt
+	done
+done

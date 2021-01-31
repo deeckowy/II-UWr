@@ -1,0 +1,82 @@
+    15a0:	41 57                	push   %r15
+    15a2:	41 56                	push   %r14
+    15a4:	41 89 f7             	mov    %esi,%r15d
+    15a7:	41 55                	push   %r13
+    15a9:	41 54                	push   %r12
+    15ab:	49 89 fe             	mov    %rdi,%r14
+    15ae:	55                   	push   %rbp
+    15af:	53                   	push   %rbx
+    15b0:	89 f3                	mov    %esi,%ebx
+    15b2:	c1 eb 1f             	shr    $0x1f,%ebx
+    15b5:	89 d5                	mov    %edx,%ebp
+    15b7:	31 c0                	xor    %eax,%eax
+    15b9:	01 f3                	add    %esi,%ebx
+    15bb:	48 83 ec 18          	sub    $0x18,%rsp
+    15bf:	31 c9                	xor    %ecx,%ecx
+    15c1:	d1 fb                	sar    %ebx
+    15c3:	45 31 e4             	xor    %r12d,%r12d
+    15c6:	8d 56 ff             	lea    -0x1(%rsi),%edx
+    15c9:	41 89 dd             	mov    %ebx,%r13d
+    15cc:	eb 11                	jmp    15df <randwalk0+0x3f>
+    15ce:	66 90                	xchg   %ax,%ax
+    15d0:	31 f6                	xor    %esi,%esi
+    15d2:	85 db                	test   %ebx,%ebx
+    15d4:	40 0f 9f c6          	setg   %sil
+    15d8:	29 f3                	sub    %esi,%ebx
+    15da:	83 ed 01             	sub    $0x1,%ebp
+    15dd:	74 43                	je     1622 <randwalk0+0x82>
+    15df:	83 e9 02             	sub    $0x2,%ecx
+    15e2:	78 54                	js     1638 <randwalk0+0x98>
+    15e4:	41 89 d8             	mov    %ebx,%r8d
+    15e7:	49 89 c1             	mov    %rax,%r9
+    15ea:	45 0f af c7          	imul   %r15d,%r8d
+    15ee:	49 d3 e9             	shr    %cl,%r9
+    15f1:	45 01 e8             	add    %r13d,%r8d
+    15f4:	4d 63 c0             	movslq %r8d,%r8
+    15f7:	43 0f b6 34 06       	movzbl (%r14,%r8,1),%esi
+    15fc:	41 01 f4             	add    %esi,%r12d
+    15ff:	41 83 e1 03          	and    $0x3,%r9d
+    1603:	74 cb                	je     15d0 <randwalk0+0x30>
+    1605:	41 83 f9 01          	cmp    $0x1,%r9d
+    1609:	74 45                	je     1650 <randwalk0+0xb0>
+    160b:	41 83 f9 02          	cmp    $0x2,%r9d
+    160f:	74 4f                	je     1660 <randwalk0+0xc0>
+    1611:	31 f6                	xor    %esi,%esi
+    1613:	44 39 ea             	cmp    %r13d,%edx
+    1616:	40 0f 9f c6          	setg   %sil
+    161a:	41 01 f5             	add    %esi,%r13d
+    161d:	83 ed 01             	sub    $0x1,%ebp
+    1620:	75 bd                	jne    15df <randwalk0+0x3f>
+    1622:	48 83 c4 18          	add    $0x18,%rsp
+    1626:	44 89 e0             	mov    %r12d,%eax
+    1629:	5b                   	pop    %rbx
+    162a:	5d                   	pop    %rbp
+    162b:	41 5c                	pop    %r12
+    162d:	41 5d                	pop    %r13
+    162f:	41 5e                	pop    %r14
+    1631:	41 5f                	pop    %r15
+    1633:	c3                   	retq   
+    1634:	0f 1f 40 00          	nopl   0x0(%rax)
+    1638:	31 c0                	xor    %eax,%eax
+    163a:	89 54 24 0c          	mov    %edx,0xc(%rsp)
+    163e:	e8 8d 03 00 00       	callq  19d0 <fast_random>
+    1643:	b9 3e 00 00 00       	mov    $0x3e,%ecx
+    1648:	8b 54 24 0c          	mov    0xc(%rsp),%edx
+    164c:	eb 96                	jmp    15e4 <randwalk0+0x44>
+    164e:	66 90                	xchg   %ax,%ax
+    1650:	31 f6                	xor    %esi,%esi
+    1652:	39 da                	cmp    %ebx,%edx
+    1654:	40 0f 9f c6          	setg   %sil
+    1658:	01 f3                	add    %esi,%ebx
+    165a:	e9 7b ff ff ff       	jmpq   15da <randwalk0+0x3a>
+    165f:	90                   	nop
+    1660:	31 f6                	xor    %esi,%esi
+    1662:	45 85 ed             	test   %r13d,%r13d
+    1665:	40 0f 9f c6          	setg   %sil
+    1669:	41 29 f5             	sub    %esi,%r13d
+    166c:	e9 69 ff ff ff       	jmpq   15da <randwalk0+0x3a>
+    1671:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    1676:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+    167d:	00 00 00 
+
+

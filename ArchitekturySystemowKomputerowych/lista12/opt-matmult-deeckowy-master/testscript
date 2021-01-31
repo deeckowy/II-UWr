@@ -1,0 +1,161 @@
+#!/bin/bash 
+X=1
+echo "16x16 matrix for version 0">>test.txt
+echo "16x16 matrix for version 0"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 16 -v 0 >> test.txt
+done
+
+X=1
+echo "64x64 matrix for version 0">>test.txt
+echo "64x64 matrix for version 0"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 64 -v 0 >> test.txt
+done
+
+X=1
+echo "256x256 matrix for version 0">>test.txt
+echo "256x256 matrix for version 0"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 256 -v 0 >> test.txt
+done
+
+X=1
+echo "512x512 matrix for version 0">>test.txt
+echo "512x512 matrix for version 0"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 512 -v 0 >> test.txt
+done
+
+X=1
+echo "1024x1024 matrix for version 0">>test.txt
+echo "1024x1024 matrix for version 0"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 1024 -v 0 >> test.txt
+done
+
+
+X=1
+echo "16x16 matrix for version 1">> test1.txt
+echo "16x16 matrix for version 1"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 16 -v 1 >> test1.txt
+done
+
+X=1
+echo "64x64 matrix for version 1">> test1.txt
+echo "64x64 matrix for version 1"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 64 -v 1 >> test1.txt
+done
+
+X=1
+echo "256x256 matrix for version 1">> test1.txt
+echo "256x256 matrix for version 1"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 256 -v 1 >> test1.txt
+done
+
+X=1
+echo "512x512 matrix for version 1">> test1.txt
+echo "512x512 matrix for version 1"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 512 -v 1 >> test1.txt
+done
+
+X=1
+echo "1024x1024 matrix for version 1">> test1.txt
+echo "1024x1024 matrix for version 1"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 1024 -v 1 >> test1.txt
+done
+
+X=1
+echo "16x16 matrix for version 2">> test2.txt
+echo "16x16 matrix for version 2"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 16 -v 2 >> test2.txt
+done
+
+X=1
+echo "64x64 matrix for version 2">> test2.txt
+echo "64x64 matrix for version 2"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 64 -v 2 >> test2.txt
+done
+
+X=1
+echo "256x256 matrix for version 2">> test2.txt
+echo "256x256 matrix for version 2"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 256 -v 2 >> test2.txt
+done
+
+X=1
+echo "512x512 matrix for version 2">> test2.txt
+echo "512x512 matrix for version 2"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 512 -v 2 >> test2.txt
+done
+
+X=1
+echo "1024x1024 matrix for version 2">> test2.txt
+echo "1024x1024 matrix for version 2"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 1024 -v 2 >> test2.txt
+done
+
+X=1
+echo "16x16 matrix for version 3">> test3.txt
+echo "16x16 matrix for version 3"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 16 -v 3 >> test3.txt
+done
+
+X=1
+echo "64x64 matrix for version 3">> test3.txt
+echo "64x64 matrix for version 3"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 64 -v 3 >> test3.txt
+done
+
+X=1
+echo "256x256 matrix for version 3">> test3.txt
+echo "256x256 matrix for version 3"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 256 -v 3 >> test3.txt
+done
+
+X=1
+echo "512x512 matrix for version 3">> test3.txt
+echo "512x512 matrix for version 3"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 512 -v 3 >> test3.txt
+done
+
+X=1
+echo "1024x1024 matrix for version 3">> test3.txt
+echo "1024x1024 matrix for version 3"
+for X in 1 2 3 4 5 6 7 8 9 10
+do 
+	./matmult  -p ipc  -n 1024 -v 3 >> test3.txt
+done

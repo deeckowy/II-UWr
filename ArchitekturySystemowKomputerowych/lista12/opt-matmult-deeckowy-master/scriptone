@@ -1,0 +1,7 @@
+#!/bin/bash
+./matmult  -n 16 -v 3
+./matmult  -n 64 -v 3
+./matmult  -n 256 -v 3
+./matmult  -n 512 -v 3
+./matmult  -n 1024 -v 3
+
