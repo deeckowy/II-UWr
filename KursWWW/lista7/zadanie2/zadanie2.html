@@ -1,0 +1,52 @@
+<?php 
+    $IsPostFormData = (isset($_POST["sent"]) && ($_POST["sent"]=="y"));
+
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Zadanie 2 lista 7</title>
+    <style>
+        .valid{
+            borded: solid green 1px;
+        }
+        .nonvalid{
+            border: solid red 1px;
+        }
+    </style>
+</head>
+<body>
+    <form name="form" action="z2l7.php" method="post">
+        <label for="cardnum">Card number:</label><br>
+        <input class=<?php 
+            if($IsPostFormData)
+            {
+                $t=$_POST["cardnum"];
+                $t=trim("- ");
+                if(strlen($t)!=24){
+                    echo nonvalid;
+                }
+
+            }else echo "";
+        ?> type="text" id="cardnum" name="cardnum" value=<?php echo $_POST["cardnum"];?>></input><br>
+        <label for="cardexp">Card expiration date (MM/YY):</label><br>
+        <input type="input" id="cardexp" name="cardexp" value=<?php echo $_POST["cardexp"];?>></input><br>
+        <label for="cvc">CVC:</label><br>
+        <input type="text" id="cvc" name="cvc" value=<?php echo $_POST["cvc"];?>></input><br>
+        <label for="name">Name and Surname:</label><br>
+        <input type="text" id="name" name="name" value=<?php 
+            echo is_array($_POST["name"]);
+        ?>></input><br>
+        <label for="email">Mail adress:</label><br>
+        <input type="text" id="email" name="email" value=<?php echo $_POST["email"];?>></input><br>
+        <label for="phone">Phone number:</label><br>
+        <input type="text" id="phone" name="phone" value=<?php echo $_POST["phone"];?>></input><br>
+        <label for="amount">Amount:</label><br>
+        <input type="text" id="amount" name="amount" value=<?php echo $_POST["amount"];?>></input><br>
+        <input type="submit" value="Send" />
+        <input name="sent" type="hidden" value="y">
+    </form>
+</body>
+
+</html>

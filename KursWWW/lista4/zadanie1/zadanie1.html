@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Zadanie 1 lista 4
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var elemlist;
+        $(document).ready(function() {
+            $('#searchphrase').on('keyup', search);
+        });
+
+        function search() {
+            var phrase = $('#searchphrase').val();
+            if (phrase.length < 3) {
+                $('li').each(function() {
+                    $(this).removeClass("grey");
+                    remove_gold(this);
+                });
+            } else if (phrase.length > 2) {
+                $('li').each(function() {
+                    var pos = compare(phrase, $(this).text());
+                    if (pos > -1) {
+                        make_gold(this, phrase, pos);
+                    } else {
+                        remove_gold(this);
+                        $(this).addClass('grey');
+                    }
+                });
+            }
+        };
+
+        function make_gold(elem, phrase, pos) {
+            var span = $(elem).children();
+            var li_text = $(elem).text();
+            span.text(phrase);
+            $(elem).text("");
+            li_text = li_text.replace(phrase, "");
+            var li2 = li_text.slice(pos);
+            li_text = li_text.replace(li2, "");
+            $(elem).append(li_text);
+            $(elem).append(span);
+            $(elem).append(li2);
+        };
+
+        function remove_gold(elem) {
+            var span = $(elem).children();
+            var li_text = $(elem).text();
+            span.text("");
+            $(elem).text("");
+            $(elem).append(span);
+            $(elem).append(li_text);
+        };
+
+        function compare(phrase, val) {
+            return val.search(phrase);
+        }
+    </script>
+    <style type="text/css">
+        .grey {
+            color: grey;
+        }
+        
+        .gold {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="items">
+        <li><span class="gold"></span>1 piorun</li>
+        <li><span class="gold"></span>2 psy</li>
+        <li><span class="gold"></span>3 slonie</li>
+        <li><span class="gold"></span>8 gwiazd</li>
+    </ul>
+    <input type="text" id="searchphrase" />
+</body>
+
+</html>

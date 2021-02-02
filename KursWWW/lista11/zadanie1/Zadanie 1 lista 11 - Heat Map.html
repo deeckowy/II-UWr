@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Zadanie 1 lista 11 - Heat Map</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://www.bing.com/api/maps/mapcontrol?callback=GetMap" async="" defer="defer"></script>
+    <script type="text/javascript">
+        function GetMap() {
+            var map = new Microsoft.Maps.Map('#myMap', {
+                credentials: 'AuIvirpJaiCAs4flMzBXbMQSP3_-GUy6lYOgIaoFieSQToHa4CLutqOd5HKAci3_',
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(51.1, 17.0333),
+                zoom: 12
+            });
+            var locs = Microsoft.Maps.TestDataGenerator.getLocations(10, map.getBounds());
+            //Load the HeatMap module.
+            Microsoft.Maps.loadModule('Microsoft.Maps.HeatMap', function() {
+                var heatmap = new Microsoft.Maps.HeatMapLayer(locs, {
+                    intensity: 1,
+                    radius: 3000,
+                    unit: 'meters',
+                    colorGradient: {
+                        '0': 'Black',
+                        '0.4': 'Purple',
+                        '0.6': 'Green',
+                        '0.8': 'Yellow',
+                        '1': 'White'
+                    }
+                });
+                map.layers.insert(heatmap);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="myMap" style="position:relative;width:1200px;height:800px;"></div>
+
+
+</body>
+
+</html>

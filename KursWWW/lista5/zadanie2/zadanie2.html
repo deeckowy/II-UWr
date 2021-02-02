@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zadanie 2 lista 5</title>
+    <script type="text/javascript" src="../jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="jquery.xpath.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.get("https://cors-anywhere.herokuapp.com/https://tvn24.pl/najnowsze.xml", function(data) {
+                var $xml = $(data);
+                $xml.find("item").each(function() {
+                    var header = $(this).find('title').text();
+                    var img_text = $(this).find('description');
+                    var link = $(this).find('link').text();
+                    img_text = img_text.text().replace("/>", "/> <br>");
+                    make_div(header, link, "", img_text);
+                });
+            });
+        });
+
+        function make_div(header, link, img, text) {
+            var x = $('<div></div>');
+            x.addClass('news');
+            var linkk = $('<a></a>');
+            linkk.attr('href', link);
+            linkk.append(header);
+            x.append(linkk);
+            x.append(img);
+            x.append(text);
+            $('body').append(x);
+        }
+    </script>
+    <style>
+        div.news {
+            margin: 10px;
+            height: 300px;
+            border: solid lightgrey 2px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 3px 5px;
+        }
+        
+        img {
+            height: 300px;
+            float: left;
+        }
+        
+        a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

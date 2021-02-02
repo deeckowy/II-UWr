@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zadanie 7 lista 2</title>
+    <meta charset="utf-8">
+    <style>
+        a {
+            font-size: 18px;
+            display: block;
+            color: black;
+            background: crimson;
+            font-weight: bold;
+            margin-top: 20px;
+            height: 30px;
+            width: 100px;
+            border: 1px solid grey;
+            text-decoration: none;
+            text-align: center;
+            -webkit-transition: color 0.5s;
+        }
+        
+        a:hover {
+            color: cyan;
+        }
+        
+        a:active {
+            text-decoration: underline overline;
+            text-decoration-style: double;
+        }
+        
+        input {
+            width: 100px;
+            -webkit-transition: width 2s;
+        }
+        
+        input:focus {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="adr">Adress:</label><br>
+        <input type="text" id="adr" name="adr"><br>
+    </form>
+    <a href="#">SAVE</a>
+</body>
+
+</html>

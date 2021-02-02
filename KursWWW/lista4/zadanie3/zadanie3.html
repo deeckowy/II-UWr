@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zadanie 3 lista 4</title>
+    <style>
+        .gallery {
+            height: auto;
+        }
+        
+        img {
+            margin: 10px;
+            height: 150px;
+            width: 150px;
+        }
+        
+        .selected {
+            margin: 5px !important;
+            border: solid red 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var size = 5;
+            $('.gallery').css('width', size * 200 + 'px');
+            var pic_names = new Array('1.jpg', '2.png', '3.jpeg', '4.jpg');
+            for (var i = 0; i < size * size; i++) {
+                var pic = $('<img>').attr('src', pic_names[randomInt(4)]);
+                pic.attr('name', 'pic_' + i.toString());
+                pic.attr('id', 'pic_' + i.toString());
+                $('#gallery').append(pic);
+            }
+
+            $('img').on('click', {
+                elem: this
+            }, select);
+            $('#selectall').on('click', selectall);
+            $('#dselect').on('click', dselectall);
+            $('#names').on('click', get_names);
+
+        });
+
+        function get_names() {
+            var names = "";
+            $('img').each(function() {
+                if ($(this).attr('class'))
+                    names += $(this).attr('name') + ', ';
+            });
+            $('#log').css('width', names.length * 7 + 'px');
+            $('#log').val(names);
+        };
+
+        function selectall() {
+            $('img').each(function() {
+                $(this).addClass('selected');
+            })
+        };
+
+        function dselectall() {
+            $('img').each(function() {
+                $(this).removeClass('selected');
+            })
+        };
+
+        function select(elem) {
+            if ($(this).attr('class'))
+                $(this).removeClass('selected');
+            else
+                $(this).addClass('selected');
+        };
+
+        function randomInt(max) {
+            return Math.floor(max * Math.random());
+        };
+    </script>
+</head>
+
+<body>
+    <div id="gallery" class="gallery"></div>
+    <button id="selectall">Select all</button>
+    <button id="dselect">Deselect all</button>
+    <button id="names">Get_Names ==></button>
+    <input type="text" id="log" />
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zadanie 2 lista 11</title>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <script type='text/javascript'>
+        var map;
+        var pinc = 0;
+        var lst;
+        var show_btn;
+        var dlt_btn;
+        var pinsmap = new Map();
+        var infbx;
+
+        function GetMap() {
+            map = new Microsoft.Maps.Map('#Map', {
+                credentials: 'AuIvirpJaiCAs4flMzBXbMQSP3_-GUy6lYOgIaoFieSQToHa4CLutqOd5HKAci3_',
+                center: new Microsoft.Maps.Location(51.1, 17.0333),
+                zoom: 12,
+            });
+            map.setOptions({
+                disableZooming: true
+            });
+            Microsoft.Maps.Events.addHandler(map, 'dblclick', function(e) {
+                createPin(e);
+            });
+            show_btn = document.getElementById('show').addEventListener('click', show_label);
+            lst = document.getElementById('pins');
+            dlt_btn = document.getElementById('delete').addEventListener('click', del_label)
+            infbx = new Microsoft.Maps.Infobox(map.getCenter(), {
+                visible: false
+            });
+            infbx.setMap(map);
+        };
+
+        function createPin(e) {
+            var pin = new Microsoft.Maps.Pushpin(e.location, {
+                title: "Pin " + pinc.toString()
+            });
+            map.entities.push(pin);
+            var str = e.location.latitude.toString() + ', ' + e.location.longitude.toString()
+            var optn = document.createElement('option');
+            pinsmap[str] = pin;
+            var txtnd = document.createTextNode(str);
+            optn.append(txtnd);
+            lst.append(optn);
+            pinc += 1;
+        };
+
+        function show_label() {
+            var pn = pinsmap[lst.value];
+            if (pn) {
+                infbx.setOptions({
+                    location: pn.getLocation(),
+                    title: pn.getTitle(),
+                    description: lst.value,
+                    visible: true
+                })
+            }
+        };
+
+        function del_label() {
+            var pn = pinsmap[lst.value];
+            if (pn) {
+                if (pn == pinsmap[lst.value])
+                    infbx.setOptions({
+                        visible: false
+                    });
+                map.entities.remove(pn);
+                lst.remove(lst.selectedIndex);
+                lst.value = "";
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="Map" style="position:relative;width:1200px;height:800px;"></div>
+    <select id="pins" style="float:left;position:relative;width:100px;"></select>
+    <button id="show" type="button">Pokaż</button>
+    <button type="button" id="delete">Usuń</button>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+
+<sample1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="zadanie1.xsd">
+
+<sample2>
+    <accnum>11222233334444555566667777</accnum>
+    <pesel>01234567890</pesel>
+    <bdate>2000-06-15</bdate>
+    <mail>john.doe@example.com</mail>
+</sample2>
+
+
+</sample1>

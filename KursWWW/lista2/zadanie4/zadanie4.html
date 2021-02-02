@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadanie 4 lista 2</title>
+    <style>
+        div.static {
+            position: static;
+            border: solid salmon;
+        }
+        
+        div.relative {
+            position: relative;
+            border: solid blue;
+            left: 40px;
+            top: 60px;
+        }
+        
+        div.absolute {
+            position: absolute;
+            border: solid chocolate;
+            width: 700px;
+            height: 300px;
+            top: 40px;
+            left: 40px;
+            right: 40px;
+            bottom: 40px;
+        }
+        
+        div.fixed {
+            position: fixed;
+            border: solid firebrick;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">
+        static div with no special positioning
+        <div class="absolute">absolute div positioned to static div</div>
+    </div>
+    <div class="fixed">
+        fixed div positioned always in the same place in window
+    </div>
+
+    <div class="absolute"> absolute div in body</div>
+    <div class="relative">relative div postioned to body</div>
+</body>
+
+</html>

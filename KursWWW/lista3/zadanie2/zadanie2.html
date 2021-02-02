@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadanie 2 lista 3</title>
+</head>
+
+<body>
+
+    <label for="brand">Brand:</label><br>
+    <select id="brand" name="brand" style="width: 100px;"></select><br>
+    <label for="model">Model:</label><br>
+    <select id="model" name="model" style="width: 100px;"></select><br>
+    <label for="new">New elem:</label><br>
+    <input type="text" id="new" name="new" /><br>
+    <label for="add">Add for:</label><br>
+    <label><input type="radio" id="brd" name="add">Brand</label>
+    <label><input type="radio" id="mdl" name="add">Model</label><br>
+    <button type="button" id="btn">ADD</button>
+
+    <script language="javascript" type="text/javascript">
+        var brd = Array("Ford", "Fiat");
+        var mdl = Array(Array("Fiesta", "Focus"));
+        mdl.push(Array("500", "Bravo"));
+
+        // scripts for brand select
+        var brdlist = document.getElementById('brand');
+        brdlist.onclick = function() {
+            brandlist();
+            clearmdlist();
+        }
+
+        function brandlist() {
+            for (var i = brdlist.length; i < brd.length; i++) {
+                var e = document.createElement("option");
+                var t = document.createTextNode(brd[i]);
+                e.append(t);
+                brdlist.append(e);
+            }
+        }
+
+        function clearmdlist() {
+            var L = mdlist.options.length - 1;
+            for (var i = L; i >= 0; i--) {
+                mdlist.remove(i);
+            }
+        }
+
+
+        // scripts for model select
+        var mdlist = document.getElementById('model');
+        mdlist.onclick = function() {
+            modellist();
+        }
+
+        function modellist() {
+            if (brd.indexOf(brdlist.nodeValue)) {
+                var idx = brd.indexOf(brdlist.value);
+                for (var i = mdlist.length; i < mdl[idx].length; i++) {
+                    var e = document.createElement("option");
+                    var t = document.createTextNode(mdl[idx][i]);
+                    e.append(t);
+                    mdlist.add(e);
+                }
+            }
+        }
+
+
+        // scripts for add button
+        var addbtn = document.getElementById('btn');
+        addbtn.onclick = function() {
+            addelem();
+        }
+
+        function addelem() {
+            var nnew = document.getElementById('new').value;
+            if (document.getElementById('mdl').checked) {
+                var x = brd.indexOf(brdlist.value);
+                if (x != -1) {
+                    mdl[x].push(nnew);
+                }
+
+            } else {
+                brd.push(nnew);
+                mdl.push(Array());
+            }
+        }
+    </script>
+</body>
+
+</html>

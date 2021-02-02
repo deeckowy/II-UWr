@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Bank transfer",
+    "description": "Informations about bank transfer",
+    "type": "object",
+    "properties": {
+        "accnum": {
+            "description": "account number of receiver",
+            "type": "number"
+        },
+        "pesel": {
+            "description": "personal number of sender",
+            "type": "number"
+        },
+        "bdate": {
+            "description": "Birth date of sender",
+            "type": "string"
+        },
+        "mail": {
+            "description": "e-mail adress",
+            "type": "string"
+        }
+    },
+    "required": ["accnum", "pesel", "bdate", "mail"]
+}
