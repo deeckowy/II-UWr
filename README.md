@@ -20,6 +20,7 @@ W tym repozytorium znajdują się moje rozwiązania do zadań z kursów, które 
     - [kalkulator rozkładu LU](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista14/LUcalc.cpp)
     - [kalkulator ONP](https://github.com/deeckowy/II-UWr/tree/main/KursCPP/lista10)
     - [Bullshit Phrase generator](https://github.com/deeckowy/II-UWr/tree/main/KursWWW/lista4/zadanie2)
+    - [Map with Pins](https://github.com/deeckowy/II-UWr/tree/main/KursWWW/lista11/zadanie2)
     
 ## ENG
 My solutions for assingments from courses taken at Institute of Computer Science. Some of more interesting things:
@@ -42,3 +43,4 @@ My solutions for assingments from courses taken at Institute of Computer Science
     - [LU decomposition calculator](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista14/LUcalc.cpp)
     - [ONP calculator](https://github.com/deeckowy/II-UWr/tree/main/KursCPP/lista10)
     - [Bullshit Phrase generator](https://github.com/deeckowy/II-UWr/tree/main/KursWWW/lista4/zadanie2)
+    - [Map with Pins](https://github.com/deeckowy/II-UWr/tree/main/KursWWW/lista11/zadanie2)
