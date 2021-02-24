@@ -14,7 +14,7 @@ W tym repozytorium znajdują się moje rozwiązania do zadań z kursów, które 
   - Projekty z SO (jeszcze nie moge ich wstawic ale pojawią się wkrótce ):
     - [shell]() 
     - [malloc]()
-    - [ext2]()
+    - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
   - Pomniejsze programy warte uwagi:
     - [kalkulator całek oznaczonych](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista13/zadanie5.cpp) 
     - [kalkulator rozkładu LU](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista14/LUcalc.cpp)
@@ -37,7 +37,7 @@ My solutions for assingments from courses taken at Institute of Computer Science
   - Operating Systems projects(will be here in few days):
     - [shell]() 
     - [malloc]()
-    - [ext2]()
+    - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
    - Other stuff:
     - [definite integral calculator](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista13/zadanie5.cpp) 
     - [LU decomposition calculator](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista14/LUcalc.cpp)
