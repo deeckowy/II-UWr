@@ -11,8 +11,8 @@ W tym repozytorium znajdują się moje rozwiązania do zadań z kursów, które 
     - [LastSpace3000](https://github.com/deeckowy/II-UWr/tree/main/LastSpace3000)
   - nigdy nieskończony projekt gry RPG pisany w Javie na zakończenie kursu programowania obiektowego :
     - [Untitled Dungeon](https://github.com/deeckowy/II-UWr/tree/main/ProgramowanieObiektowe/project)
-  - Projekty z SO (jeszcze nie moge ich wstawic ale pojawią się wkrótce ):
-    - [shell]() 
+  - Projekty z SO:
+    - [shell](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-shell-master) 
     - [malloc](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-malloc-master)
     - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
   - Pomniejsze programy warte uwagi:
@@ -34,8 +34,8 @@ My solutions for assingments from courses taken at Institute of Computer Science
     - [LastSpace3000](https://github.com/deeckowy/II-UWr/tree/main/LastSpace3000)
   - Object-Oriented Programing course final project (Java and JSFML) **warning** never finished, maybe someday i will do it :c
     - [Untitled Dungeon](https://github.com/deeckowy/II-UWr/tree/main/ProgramowanieObiektowe/project)
-  - Operating Systems projects(will be here in few days):
-    - [shell]() 
+  - Operating Systems projects:
+    - [shell](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-shell-master) 
     - [malloc](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-malloc-master)
     - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
    - Other stuff:
