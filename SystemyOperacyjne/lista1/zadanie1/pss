@@ -1,0 +1,1 @@
+ps -eo user,pid,ppid,pgid,tid,pri,stat,wchan,cmd
