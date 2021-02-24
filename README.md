@@ -13,7 +13,7 @@ W tym repozytorium znajdują się moje rozwiązania do zadań z kursów, które 
     - [Untitled Dungeon](https://github.com/deeckowy/II-UWr/tree/main/ProgramowanieObiektowe/project)
   - Projekty z SO (jeszcze nie moge ich wstawic ale pojawią się wkrótce ):
     - [shell]() 
-    - [malloc]()
+    - [malloc](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-malloc-master)
     - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
   - Pomniejsze programy warte uwagi:
     - [kalkulator całek oznaczonych](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista13/zadanie5.cpp) 
@@ -36,7 +36,7 @@ My solutions for assingments from courses taken at Institute of Computer Science
     - [Untitled Dungeon](https://github.com/deeckowy/II-UWr/tree/main/ProgramowanieObiektowe/project)
   - Operating Systems projects(will be here in few days):
     - [shell]() 
-    - [malloc]()
+    - [malloc](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-malloc-master)
     - [ext2](https://github.com/deeckowy/II-UWr/tree/main/SystemyOperacyjne/so-ext2-master)
    - Other stuff:
     - [definite integral calculator](https://github.com/deeckowy/II-UWr/blob/main/AnalizaNumerycznaL/lista13/zadanie5.cpp) 
