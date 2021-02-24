@@ -1,0 +1,199 @@
+Measuring performance with a cycle counter.
+Processor clock rate ~= 1479.4 MHz
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800000000
+size = 4112
+prev = (nil)
+next = (nil)
+free = false
+HEAP END = 0x80000100f
+LASTBLOCK = 0x800000000
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800001010
+size = 32
+prev = 0x800000000
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800000000
+size = 4112
+prev = (nil)
+next = 0x800001010
+free = false
+HEAP END = 0x80000102f
+LASTBLOCK = 0x800001010
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800001030
+size = 4128
+prev = 0x800001010
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800001010
+size = 32
+prev = 0x800000000
+next = 0x800001030
+free = false
+~~~BLOCK~~~
+adress = 0x800000000
+size = 4112
+prev = (nil)
+next = 0x800001010
+free = true
+HEAP END = 0x80000204f
+LASTBLOCK = 0x800001030
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800001030
+size = 4128
+prev = 0x800001010
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800001010
+size = 32
+prev = 0x800000020
+next = 0x800001030
+free = false
+~~~BLOCK~~~
+adress = 0x800000020
+size = 4080
+prev = 0x800000000
+next = 0x800001010
+free = true
+~~~BLOCK~~~
+adress = 0x800000000
+size = 32
+prev = (nil)
+next = 0x800000020
+free = false
+HEAP END = 0x80000204f
+LASTBLOCK = 0x800001030
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800001030
+size = 4128
+prev = 0x800000020
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800000020
+size = 4112
+prev = 0x800000000
+next = 0x800001030
+free = true
+~~~BLOCK~~~
+adress = 0x800000000
+size = 32
+prev = (nil)
+next = 0x800000020
+free = false
+HEAP END = 0x80000204f
+LASTBLOCK = 0x800001030
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800002050
+size = 4128
+prev = 0x800000020
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800000020
+size = 8240
+prev = 0x800000000
+next = 0x800002050
+free = true
+~~~BLOCK~~~
+adress = 0x800000000
+size = 32
+prev = (nil)
+next = 0x800000020
+free = false
+HEAP END = 0x80000306f
+LASTBLOCK = 0x800002050
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800002050
+size = 4128
+prev = 0x800000040
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800000040
+size = 8208
+prev = 0x800000020
+next = 0x800002050
+free = true
+~~~BLOCK~~~
+adress = 0x800000020
+size = 32
+prev = 0x800000000
+next = 0x800000040
+free = false
+~~~BLOCK~~~
+adress = 0x800000000
+size = 32
+prev = (nil)
+next = 0x800000020
+free = false
+HEAP END = 0x80000306f
+LASTBLOCK = 0x800002050
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800002050
+size = 4128
+prev = 0x800000040
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800000040
+size = 8208
+prev = 0x800000020
+next = 0x800002050
+free = true
+~~~BLOCK~~~
+adress = 0x800000020
+size = 32
+prev = 0x800000000
+next = 0x800000040
+free = false
+~~~BLOCK~~~
+adress = 0x800000000
+size = 32
+prev = (nil)
+next = 0x800000020
+free = true
+HEAP END = 0x80000306f
+LASTBLOCK = 0x800002050
+
+=========HEAP BLOCKS==============
+~~~BLOCK~~~
+adress = 0x800002050
+size = 4128
+prev = 0x800001060
+next = (nil)
+free = true
+~~~BLOCK~~~
+adress = 0x800001060
+size = 4128
+prev = 0x800001030
+next = (nil)
+free = false
+~~~BLOCK~~~
+adress = 0x800001030
+size = -641587902
+prev = 0x79cf874e69011b66
+next = 0x7d9c23572
+free = false
+~~~BLOCK~~~
+adress = 0x79cf874e69011b66
