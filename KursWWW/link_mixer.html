@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>Link Mixer</title>
+	<script>
+		window.onload=function()
+		{
+			var tab=Array("https://www.google.com","https://www.wp.pl","https://www.ii.drx.pl");
+			var idx=getRandomIntInclusive(0, 2)
+			console.log(idx);
+			console.log(tab);
+			console.log(tab[idx]);
+			window.open(tab[idx], '_blank');
+			window.close();
+		};
+		function getRandomIntInclusive(min, max) 
+		{
+ 			 min = Math.ceil(min);
+		   max = Math.floor(max);
+  	 	 return Math.floor(Math.random() * (max - min + 1)) + min;
+		};
+	</script>
+</head>
+ 
+<body>
+ 
+</body>
